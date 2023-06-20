@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Money;
 
 class MoneyController extends Controller
 {
@@ -18,6 +19,8 @@ class MoneyController extends Controller
 
     public function exeCreate(Request $request){
         $money = $request->all();
-        dd($money);
+        Money::create($money);
+
+        return view('money.index');
     }
 }
