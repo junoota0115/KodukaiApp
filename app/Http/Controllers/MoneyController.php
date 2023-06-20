@@ -10,7 +10,9 @@ class MoneyController extends Controller
 {
     //
     public function index(){
-       return view('money.index'); 
+        $query = Money::query();
+        $money_logs = $query->get();
+       return view('money.index', compact('money_logs')); 
     }
 
     public function showCreate(){
@@ -21,6 +23,6 @@ class MoneyController extends Controller
         $money = $request->all();
         Money::create($money);
 
-        return view('money.index');
+        return redirect('index');
     }
 }
