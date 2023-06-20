@@ -11,4 +11,8 @@ class MoneyController extends Controller
     public function index(){
        return view('money.index'); 
     }
+
+    public function showCreate(){
+        return view('money.create');
+    }
 }

@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/index', [App\Http\Controllers\MoneyController::class, 'index'])->name('index');
+Route::get('/create', [App\Http\Controllers\MoneyController::class, 'showCreate'])->name('showCreate');
