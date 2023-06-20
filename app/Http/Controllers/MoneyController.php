@@ -15,4 +15,9 @@ class MoneyController extends Controller
     public function showCreate(){
         return view('money.create');
     }
+
+    public function exeCreate(Request $request){
+        $money = $request->all();
+        dd($money);
+    }
 }
