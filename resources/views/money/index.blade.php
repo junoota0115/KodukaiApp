@@ -3,20 +3,19 @@
 
 @section('content')
 <h1>一覧ページ</h1>
+
 <div class="money-top">
-ここに合計金額を入れる<br>
-100000円
-</div>
+    Total
 <br>
-<div class="money-log">
-    @foreach($money_logs as $money_log)
-    <div class="money-log">
-    {{$money_log->created_at}}
-    {{$money_log->price}}円
-    {{$money_log->comment}}
-    </div>
+@foreach ($total_prices as $total_price)
+    <tr>
+      <td>{{ $total_price->total_prices }}円</td>
+    </tr>
     @endforeach
 </div>
-
+<br>
+<div class="link-btn">
 <a href="{{ url('/create') }}" class="btn btn-secondary">入金</a>
+<a href="{{ url('/detail') }}" class="btn btn-secondary">履歴</a>
+</div>
 @endsection

@@ -11982,3 +11982,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+
+.money-top{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  color: crimson;
+  font-size: 50px;
+}
+
+.link-btn{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.form-group{
+  width: 30%;
+}

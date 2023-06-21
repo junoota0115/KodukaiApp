@@ -8,13 +8,14 @@ class CreateMoneyTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *  
      * @return void
      */
     public function up()
     {
         Schema::create('money', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
             $table->integer('price');
             $table->text('comment');
             $table->timestamps();
