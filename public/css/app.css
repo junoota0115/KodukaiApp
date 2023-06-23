@@ -11983,7 +11983,9 @@ textarea.form-control-lg {
   }
 }
 
-
+.money-index{
+background-color: #fff3cd;
+}
 .money-top{
   display:flex;
   justify-content:center;
@@ -11997,7 +11999,12 @@ textarea.form-control-lg {
   justify-content:center;
   align-items: center;
 }
+#hyouji{
+}
 
-.form-group{
-  width: 30%;
+
+.create-form{
+  display:flex;
+  justify-content:center;
+  align-items: center;
 }

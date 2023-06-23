@@ -34,4 +34,12 @@ class MoneyController extends Controller
         $money_logs = $query->get();
         return view('money.detail', compact('money_logs'));
     }
+
+
+    public function exeData()
+    {
+        $data = DB::table('Money')->sum('price');
+
+        return response()->json($data);
+    }
 }

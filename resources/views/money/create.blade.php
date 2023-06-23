@@ -5,6 +5,7 @@
 <div class="container">
     <div class="row">
         <h1>登録フォーム</h1>
+        <div class="create-form">
         <form action="{{route('exeCreate')}}" method="post" >
             @csrf
 
@@ -18,5 +19,6 @@
             </div>
             <button type="submit" class="btn btn-primary">送信</button>
         </form>
+        </div>
 
 @endsection
