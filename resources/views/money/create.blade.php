@@ -18,7 +18,8 @@
                 <textarea class="form-control"  id="comment" name="comment" placeholder="comment"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">送信</button>
+            <a href="{{ url('/index') }}" class="btn btn-secondary">戻る</a>
         </form>
-        </div>
+    </div>
 
 @endsection
