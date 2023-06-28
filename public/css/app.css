@@ -8123,7 +8123,7 @@ textarea.form-control-lg {
 }
 
 .py-4 {
-  padding-top: 1.5rem !important;
+  /* padding-top: 1.5rem !important; */
   padding-bottom: 1.5rem !important;
 }
 
@@ -11983,9 +11983,15 @@ textarea.form-control-lg {
   }
 }
 
-.money-index{
-background-color: #fff3cd;
-}
+/* 追加項目CSS */
+.money-main{
+  background-color: #fff3cd;
+  width: 100%;
+  height: 100vh;
+
+  }
+/* =================index Top-page================= */
+
 .money-top{
   display:flex;
   justify-content:center;
@@ -11999,12 +12005,24 @@ background-color: #fff3cd;
   justify-content:center;
   align-items: center;
 }
-#hyouji{
-}
+/* =================index Top-page================= */
 
+/* =================create-page================= */
 
 .create-form{
   display:flex;
   justify-content:center;
   align-items: center;
 }
+.btn-secondary {
+  margin: 5px;
+}
+/* =================create-page================= */
+
+/* =================detail-page================= */
+.money-log-main{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+/* =================detail-page================= */

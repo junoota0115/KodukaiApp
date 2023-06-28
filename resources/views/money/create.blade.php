@@ -2,10 +2,10 @@
 @section('title','index')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <h1>登録フォーム</h1>
-        <div class="create-form">
+
+    <div class="money-main">
+      <h1>登録フォーム</h1>
+      <div class="create-form">
         <form action="{{route('exeCreate')}}" method="post" >
             @csrf
 
@@ -17,9 +17,13 @@
                 <label for="comment">入金理由</label>
                 <textarea class="form-control"  id="comment" name="comment" placeholder="comment"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">送信</button>
-            <a href="{{ url('/index') }}" class="btn btn-secondary">戻る</a>
+
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+            <a href="{{ url('/index') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i></a>
+            
         </form>
+      </div>
     </div>
+
 
 @endsection

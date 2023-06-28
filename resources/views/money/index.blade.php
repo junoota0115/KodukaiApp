@@ -2,7 +2,7 @@
 @section('title','index')
 
 @section('content')
-<div class="money-index">
+<div class="money-main">
   <h1>一覧ページ</h1>
     <div class="money-top">
       ￥
@@ -14,15 +14,16 @@
         </tr>
         @endforeach
       </div>
-        <button class="btn btn-secondary" id="hyouji">切替</button>
+        <button class="btn " id="hyouji"><i class="fa-solid fa-eye"></i></button>
       </div>
     <br>
   <div class="link-btn">
-    <a href="{{ url('/create') }}" class="btn btn-secondary">入金</a>
-    <a href="{{ url('/detail') }}" class="btn btn-secondary">履歴</a>
+    <a href="{{ url('/create') }}" class="btn btn-secondary"><i class="fa-solid fa-money-bill-transfer"></i>入金</a>
+    <a href="{{ url('/detail') }}" class="btn btn-secondary"><i class="fa-solid fa-landmark"></i>履歴</a>
   </div>
 </div>
 
 <script src="js/jquery-3.7.0.min.js"></script>
 <script src="{{ asset ('js/click.js') }} "></script>
+
 @endsection
