@@ -6,16 +6,16 @@
     <div class="dream-main">
         <h1>夢の作成画面</h1>
       <div class="create-form">
-        <form action="{{route('exeCreate')}}" method="post" >
+        <form action="{{route('dreamUplode')}}" method="post" >
             @csrf
 
             <div class="form-group">
-                <label for="dream-price">目標金額を入力</label>
-                <input type="integer" class="form-control" id="dream-price" name="dream-price" placeholder="目標金額"
+                <label for="dream_price">目標金額を入力</label>
+                <input type="integer" class="form-control" id="dream_price" name="dream_price" placeholder="目標金額">
             </div>
             <div class="form-group">
-                <label for="dream-comment">理由</label>
-                <textarea class="form-control"  id="dream-comment" name="dream-comment" placeholder="コメント"></textarea>
+                <label for="comment">理由</label>
+                <textarea class="form-control"  id="comment" name="comment" placeholder="コメント"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>

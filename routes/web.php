@@ -29,5 +29,7 @@ Route::get('/data', [App\Http\Controllers\MoneyController::class, 'exeData'])->n
 
 
 Route::get('/dreamCreate', [App\Http\Controllers\dreamsController::class, 'dreamCreate'])->name('dreamCreate');
+Route::post('/dreamCreate', [App\Http\Controllers\dreamsController::class, 'dreamUplode'])->name('dreamUplode');
+Route::get('/dreamDetail', [App\Http\Controllers\dreamsController::class, 'dreamDetail'])->name('dreamDetail');
 
 
