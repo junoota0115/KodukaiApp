@@ -25,7 +25,9 @@ Route::get('/index', [App\Http\Controllers\MoneyController::class, 'index'])->na
 Route::get('/create', [App\Http\Controllers\MoneyController::class, 'showCreate'])->name('showCreate');
 Route::post('/create', [App\Http\Controllers\MoneyController::class, 'exeCreate'])->name('exeCreate');
 Route::get('/detail', [App\Http\Controllers\MoneyController::class, 'showDetail'])->name('showDetail');
-
 Route::get('/data', [App\Http\Controllers\MoneyController::class, 'exeData'])->name('exeData');
+
+
+Route::get('/dreamCreate', [App\Http\Controllers\dreamsController::class, 'dreamCreate'])->name('dreamCreate');
 
 
