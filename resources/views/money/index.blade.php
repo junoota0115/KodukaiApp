@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="money-main">
-  <h1>一覧ページ</h1>
+  <div>{{ Auth::user()->name }}さんのページ</div>
     <div class="money-top">
       ￥
     <br>
