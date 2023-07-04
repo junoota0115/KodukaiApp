@@ -3,7 +3,9 @@
 
 @section('content')
 <div class="money-main">
-  <div>{{ Auth::user()->name }}さんのページ</div>
+
+    <div>{{ Auth::user()->name }}さんのページ</div>
+
     <div class="money-top">
       ￥
     <br>

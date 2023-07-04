@@ -6,11 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Money;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 class MoneyController extends Controller
 {
     //
     public function index(){
+        if (Auth::check()) {
+            // ログインしている場合の処理
+        } else {
+            return redirect('/login');
+        }
+        
         $total_prices = Money::selectRaw('SUM(price) as total_prices')->where('user_id','=',\Auth::id())
          ->get();
        return view('money.index',compact('total_prices')); 
