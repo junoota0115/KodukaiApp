@@ -27,8 +27,15 @@ class dreamsController extends Controller
         $dream_total_prices = Dream::selectRaw('SUM(dream_price) as dream_total_prices')->where('user_id','=',\Auth::id())
          ->get();
 
-        $query = Dream::select('dream_price','comment')->where('user_id','=',\Auth::id())->orderBy("created_at","DESC");
+        $query = Dream::select('id','dream_price','comment')->where('user_id','=',\Auth::id())->orderBy("created_at","DESC");
         $dream_logs = $query->get();
         return view('dream.detail',compact('dream_total_prices','dream_logs'));
+    }
+
+    public function dreamDelete(Request $request){
+        dd($request);
+        $db_data = new Dream;
+        $db_data->destroy($request->id);
+        return response()->json(['result'=>'成功']);
     }
 }
