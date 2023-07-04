@@ -22,4 +22,13 @@ class dreamsController extends Controller
         });
         return redirect('index');
     }
+
+    public function dreamDetail(){
+        $dream_total_prices = Dream::selectRaw('SUM(dream_price) as dream_total_prices')->where('user_id','=',\Auth::id())
+         ->get();
+
+        $query = Dream::select('dream_price','comment')->where('user_id','=',\Auth::id())->orderBy("created_at","DESC");
+        $dream_logs = $query->get();
+        return view('dream.detail',compact('dream_total_prices','dream_logs'));
+    }
 }
