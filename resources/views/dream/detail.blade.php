@@ -26,7 +26,12 @@
         <div class="dream-log">
             <td>{{$dream_log->dream_price}}円</td>
             <td>{{$dream_log->comment}}</td>
-            <td><button class="btn" id="delete" dream_id="{{$dream_log->id}}">削除</button></td>
+            @auth
+            <form clas="id">
+            <td><button class="btn" id="delete" dream_id="{{$dream_log->id}}">削除</button>
+            </form>
+            </td>
+            @endauth
         </div>
     </table>
         @endforeach

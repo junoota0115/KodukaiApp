@@ -33,7 +33,6 @@ class dreamsController extends Controller
     }
 
     public function dreamDelete(Request $request){
-        dd($request);
         $db_data = new Dream;
         $db_data->destroy($request->id);
         return response()->json(['result'=>'成功']);
