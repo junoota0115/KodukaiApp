@@ -20,7 +20,7 @@ class dreamsController extends Controller
         DB::transaction(function () use($dream){
             Dream::create(['dream_price'=>$dream['dream_price'],'comment'=>$dream['comment'],'user_id'=>\Auth::id()]);
         });
-        return redirect('index');
+        return redirect('dreamDetail');
     }
 
     public function dreamDetail(){
