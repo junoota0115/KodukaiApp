@@ -15,5 +15,14 @@ class MoneyTableSeeder extends Seeder
     public function run()
     {
         //
+        Money::create([
+            'price'=>100000,
+            'comment'=>'test1',
+        ]);
+
+        Money::create([
+            'price'=>25000,
+            'comment'=>'test test2',
+        ]);
     }
 }
