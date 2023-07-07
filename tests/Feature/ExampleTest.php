@@ -8,6 +8,14 @@ use App\Models\User;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
+    protected function refreshDatabase()
+    {
+        $this->artisan('migrate');
+    }
+    //上記を入れることで、DB内のデータがリフレッシュされない。
+    //ただし、テストコードで作成したデータも保持されたままになる
+
     /**
      * A basic test example.
      *
@@ -61,6 +69,40 @@ class ExampleTest extends TestCase
     $responseAfterRedirect = $this->get('/home');
     $responseAfterRedirect->assertSee('You are logged in!'); 
     $this->assertAuthenticatedAs($user); // ログイン済みかどうかのチェック
+
+}
+
+//ログイン後にindexページへ遷移するか確認
+public function testButtonClick()
+{
+    /** @var \App\Models\User $user */
+    $user = User::factory()->create();
+
+    $response = $this->actingAs($user)->get('/home');
+
+    $response->assertStatus(200);
+
+    // ボタンを押して遷移する
+    $responseAfterClick = $this->actingAs($user)->get('/index'); // ボタンが送信するURLを指定
+
+    // 遷移後のページで期待される動作や表示をアサーションする
+    $responseAfterClick->assertStatus(200);
+    $responseAfterClick->assertSee('小遣い');
+    $responseAfterClick->assertSee('さんのページ');
+
+    //入金ボタンを押すと登録フォームに遷移
+    $responseAfterClick = $this->actingAs($user)->get('/create'); // ボタンが送信するURLを指定
+    $responseAfterClick->assertStatus(200);
+    $responseAfterClick->assertSee('登録フォーム');
+    //ホームボタンを押すとindexページに遷移
+    $responseAfterClick = $this->actingAs($user)->get('/index'); // ボタンが送信するURLを指定
+    $responseAfterClick->assertStatus(200);
+    $responseAfterClick->assertSee('さんのページ');
+    //履歴ボタンを押すとdetailページに遷移
+    $responseAfterClick = $this->actingAs($user)->get('/detail'); // ボタンが送信するURLを指定
+    $responseAfterClick->assertStatus(200);
+    $responseAfterClick->assertSee('履歴');
+    
 }
 
 
