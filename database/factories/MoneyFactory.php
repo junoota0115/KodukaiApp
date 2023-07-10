@@ -19,7 +19,8 @@ class MoneyFactory extends Factory
     {
         return [
             //
-            'price'=>$this->faker->randomNumberBetween(10, 50),
+            'user_id' => $this->faker->numberBetween(1, 10),
+            'price' => $this->faker->numberBetween(1000, 100000),
             'comment'=>$this->faker->sentence,
         ];
     }
