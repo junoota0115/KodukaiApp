@@ -24,7 +24,7 @@
 
 
         <a href="{{ url('/create') }}" class="btn btn-secondary"><i class="fa-solid fa-money-bill-transfer"></i>入金</a>
-        <a href="{{ url('/index') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i>戻る</a>
+        <a href="{{ url('/') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i>戻る</a>
 
 </div>
 @endsection

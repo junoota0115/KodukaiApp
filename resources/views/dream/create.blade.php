@@ -19,7 +19,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
-            <a href="{{ url('/index') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i></a>
+            <a href="{{ url('/') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i></a>
             
         </form>
       </div>
