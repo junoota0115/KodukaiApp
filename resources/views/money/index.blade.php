@@ -7,6 +7,9 @@
     <div>{{ Auth::user()->name }}さんのページ</div>
 
     <div class="money-top">
+      <div class="main-img">
+        {{-- <img id="img" src="{{asset('images/main.png')}}">? --}}
+      </div>
       ￥
     <br>
       <div class="money-total">  

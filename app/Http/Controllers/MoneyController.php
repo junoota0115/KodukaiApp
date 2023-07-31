@@ -45,7 +45,7 @@ class MoneyController extends Controller
 
     public function exeData()
     {
-        $data = DB::table('Money')->sum('price');
+        $data = DB::table('Money')->where('user_id','=',\Auth::id())->sum('price');
 
         return response()->json($data);
     }
