@@ -10,6 +10,10 @@ use DB;
 class dreamsController extends Controller
 {
     //
+    public function dreamIndex(){
+        return view('dream.index');
+    }
+
     public function dreamCreate(){
         return view('dream.create');
     }

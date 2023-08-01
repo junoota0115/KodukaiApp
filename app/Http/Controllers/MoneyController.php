@@ -33,7 +33,7 @@ class MoneyController extends Controller
         Money::create(['price' => $money['price'],'comment'=>$money['comment'],'user_id'=>\Auth::id()]);
         });
 
-        return redirect('index');
+        return redirect('/');
     }
 
     public function showDetail(){
