@@ -30,8 +30,8 @@
             </tbody>
         </table>
         
-        <a href="{{ url('/create') }}" class="btn btn-secondary"><i class="fa-solid fa-money-bill-transfer"></i>入金</a>
-        <a href="{{ url('/') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i>戻る</a>
+        <a href="{{ url('/create') }}" class="btn btn-primary"><i class="fa-solid fa-money-bill-transfer"></i>小遣いの管理をする</a>
+        <a href="{{ url('/') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i>Topへ戻る</a>
 
 </div>
 @endsection

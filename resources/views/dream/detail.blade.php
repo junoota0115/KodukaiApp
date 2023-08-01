@@ -37,7 +37,7 @@
         @endforeach
 
 
-        <a href="{{ url('/dreamCreate') }}" class="btn btn-secondary"><i class="fa-solid fa-money-bill-transfer"></i>目標追加</a>
+        <a href="{{ url('/dreamCreate') }}" class="btn btn-success"><i class="fa-solid fa-money-bill-transfer"></i>目標追加</a>
         <a href="{{ url('/') }}" class="btn btn-secondary"><i class="fa-solid fa-house"></i>戻る</a>
 
 </div>

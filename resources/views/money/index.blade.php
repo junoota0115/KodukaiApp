@@ -22,9 +22,9 @@
     </div>
 
       <div class="link-btn">
-        <a href="{{ url('/create') }}" class="btn btn-secondary"><i class="fa-solid fa-money-bill-transfer"></i>入金</a>
+        <a href="{{ url('/create') }}" class="btn btn-primary"><i class="fa-solid fa-money-bill-transfer"></i>小遣いの管理をする</a>
         <a href="{{ url('/detail') }}" class="btn btn-secondary"><i class="fa-solid fa-landmark"></i>履歴</a>
-        <a href="{{ url('/dreamCreate') }}" class="btn btn-secondary"><i class="fa-solid fa-money-bill-transfer"></i>目標登録 </a>
+        <a href="{{ url('/dreamCreate') }}" class="btn btn-success"><i class="fa-solid fa-money-bill-transfer"></i>目標登録 </a>
         <a href="{{ url('/dreamDetail') }}" class="btn btn-secondary">目標 </a>
       </div>
 </div>
